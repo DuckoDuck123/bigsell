@@ -1,0 +1,291 @@
+{
+  "_note": "价格是 Simba 先估的，敲定后再改。askingPrice/originalPrice 填 null = 显示「价格待定·私聊」。showcase 字段填模块名(如 evolution)则详情页加载 assets/js/showcases/<name>.js 的定制故事区。",
+  "listings": [
+    {
+      "id": "bundle-drone-calculus",
+      "type": "bundle",
+      "title": "大疆无人机 · 含秘籍",
+      "theme": "无人机 / 航拍 / 秘籍",
+      "tagline": "一台 DJI Mini 3 Pro，外加一本用途出人意料的秘籍。",
+      "accent": "#5B9BD5",
+      "tint": "#16202E",
+      "cover": "assets/img/covers/bundle-drone-calculus.png",
+      "summary": "DJI Mini 3 Pro 带屏遥控器版：不到 249 克、4K/60fps、True Vertical Shooting，长续航电池、收纳箱、128G 卡一应俱全。再附一本《高等数学》当「秘籍」——具体怎么用，往下看。",
+      "askingPrice": 2399,
+      "showcase": "drone",
+      "items": [
+        { "name": "DJI Mini 3 Pro · 带屏遥控器（DJI RC）版", "kind": "item", "originalPrice": 7311, "proof": "assets/img/proofs/dji-mini-3-pro.jpg", "note": "含长续航电池 / 收纳箱 / 闪迪 128G 卡。肯定能正常起飞拍摄；好久没飞，不保证没有小毛病，若需官方寄修可再谈折扣。" },
+        { "name": "《高等数学》（秘籍）", "kind": "book", "originalPrice": 80, "proof": "", "note": "" }
+      ],
+      "gallery": [],
+      "customPage": ""
+    },
+    {
+      "id": "bundle-evolution-specimens",
+      "type": "bundle",
+      "title": "进化论 · 附证据三罐",
+      "theme": "进化论 / 标本 / 起源",
+      "tagline": "读完进化论，旁边就摆着进化的证据——三罐，真的。",
+      "accent": "#D8A24A",
+      "tint": "#2A2416",
+      "cover": "assets/img/covers/bundle-evolution-specimens.png",
+      "summary": "从达尔文到基因组，三本把「我们从哪来」讲透的书。再加三罐鸽子器官标本，给胆子大、也认真的人。",
+      "askingPrice": 79,
+      "showcase": "evolution",
+      "items": [
+        { "name": "《物种起源》", "kind": "book", "originalPrice": 40, "proof": "", "note": "" },
+        { "name": "《进化论讲义》（王立铭）", "kind": "book", "originalPrice": 34, "proof": "", "note": "" },
+        { "name": "《基因传》", "kind": "book", "originalPrice": 54, "proof": "", "note": "" },
+        { "name": "鸽子器官标本 ×3 罐", "kind": "item", "originalPrice": 45, "proof": "", "note": "大脑 / 心脏 / 其他，各一罐，密封完好" }
+      ],
+      "gallery": [],
+      "customPage": ""
+    },
+    {
+      "id": "bundle-wealth-money",
+      "type": "bundle",
+      "title": "国富论 · 含启动资金",
+      "theme": "经济学 / 资本 / 假钞",
+      "tagline": "讲怎么创造财富的书，配一沓不能花的财富。",
+      "accent": "#C9A227",
+      "tint": "#2A2614",
+      "cover": "assets/img/covers/bundle-wealth-money.png",
+      "summary": "亚当·斯密负责理论，旁边那沓「原始资本」负责气氛。看清楚——是练功钞，没法花。",
+      "askingPrice": 25,
+      "showcase": "wealth",
+      "items": [
+        { "name": "《国富论》", "kind": "book", "originalPrice": 42, "proof": "", "note": "" },
+        { "name": "练功钞一沓（道具 / 非流通）", "kind": "item", "originalPrice": 1, "proof": "", "note": "银行点钞练习用，不能花，别试" }
+      ],
+      "gallery": [],
+      "customPage": ""
+    },
+    {
+      "id": "bundle-sword-forensics",
+      "type": "bundle",
+      "title": "洗冤集录 · 全套办案",
+      "theme": "法医 / 冷兵器 / 判官",
+      "tagline": "断案、审讯、行刑，一条龙。",
+      "accent": "#C9533F",
+      "tint": "#2A1815",
+      "cover": "assets/img/covers/bundle-sword-forensics.png",
+      "summary": "宋慈的法医奠基之作，配一把龙泉摆件剑和一张判官面具。给对「正义如何落地」有执念的人。",
+      "askingPrice": 79,
+      "showcase": "forensics",
+      "items": [
+        { "name": "《洗冤集录》", "kind": "book", "originalPrice": 25, "proof": "", "note": "宋慈 · 中国法医学奠基。文言原文，但配有白话译文对照" },
+        { "name": "龙泉宝剑（摆件 / 未开刃）", "kind": "item", "originalPrice": 139, "proof": "", "note": "装饰用，含剑架，剑身有点生锈" },
+        { "name": "判官面具", "kind": "item", "originalPrice": 3, "proof": "", "note": "《不眠之夜》Sleep No More 互动剧赠送，此处按成本估价" }
+      ],
+      "gallery": [],
+      "customPage": ""
+    },
+    {
+      "id": "bundle-wand-calculus",
+      "type": "bundle",
+      "title": "微积分的力量 · 附魔杖",
+      "theme": "微积分 / 魔法 / 道具",
+      "tagline": "微积分是真的魔法，魔杖是假的——但很好看。",
+      "accent": "#9B6BE0",
+      "tint": "#1F1830",
+      "cover": "assets/img/covers/bundle-wand-calculus.png",
+      "summary": "斯托加茨告诉你微积分如何重塑世界，环球影城的魔杖负责让这件事看起来更像魔法。",
+      "askingPrice": 89,
+      "showcase": "calculus",
+      "items": [
+        { "name": "《微积分的力量》（Infinite Powers · 斯托加茨）", "kind": "book", "originalPrice": 38, "proof": "", "note": "" },
+        { "name": "环球影城魔杖 · 小天狼星款（含盒）", "kind": "item", "originalPrice": 349, "proof": "", "note": "正版周边，杖头有感应装置，可在环球影城施法互动。考虑到多数人未必会专程去，已大幅让价" }
+      ],
+      "gallery": [],
+      "customPage": ""
+    },
+    {
+      "id": "bundle-magneto-scooter",
+      "type": "bundle",
+      "title": "万磁王 · 含座驾",
+      "theme": "电磁 / 漫画 / 平衡",
+      "tagline": "万磁王控制金属，你控制这台两轮的。",
+      "accent": "#E0473A",
+      "tint": "#2A1513",
+      "cover": "assets/img/covers/bundle-magneto-scooter.png",
+      "summary": "一本万磁王漫画，配一台还能跑的平衡车。废墟背景是拍照送的，车不送废墟。",
+      "askingPrice": 399,
+      "showcase": "magneto",
+      "items": [
+        { "name": "《万磁王 Magneto》漫画 · Vol.1「恶名昭著」", "kind": "book", "originalPrice": 32, "proof": "", "note": "Marvel" },
+        { "name": "l-walk 双轮体感平衡车", "kind": "item", "originalPrice": 2799, "proof": "assets/img/proofs/balance-car.jpg", "note": "别人送的，价格按现在淘宝同款；多处老化但可正常使用。厂家多年未出新品、似已停产" }
+      ],
+      "gallery": [],
+      "customPage": ""
+    },
+    {
+      "id": "bundle-touch-cards",
+      "type": "bundle",
+      "title": "大师典藏与菜鸟武器",
+      "theme": "牌技 / 收藏 / 飞牌",
+      "tagline": "一副舍不得用的全球限量典藏，配一副可着劲造的飞牌。",
+      "accent": "#9FB2C4",
+      "tint": "#1A1E24",
+      "cover": "assets/img/covers/bundle-touch-cards.png",
+      "summary": "Touch V4 是 Cardistry Touch 的全球限量典藏，颜值与手感都拉满；防水塑料飞牌则负责被你反复折磨。一副供着，一副练着。",
+      "askingPrice": 119,
+      "showcase": "cards",
+      "items": [
+        { "name": "Touch V4 · ESCP_THIS 2020 卡牌", "kind": "item", "originalPrice": 229, "proof": "", "note": "全球限量 2500 副，Cardistry Touch 出品" },
+        { "name": "防水塑料飞牌扑克", "kind": "item", "originalPrice": 32, "proof": "", "note": "摔不烂、泼不湿，飞牌凌厉" }
+      ],
+      "gallery": [],
+      "customPage": ""
+    },
+    {
+      "id": "bundle-physics-rickmorty",
+      "type": "bundle",
+      "title": "R&M｜Portal 套装",
+      "theme": "力学 / 电磁 / Portal",
+      "tagline": "想造传送枪、再在月球上跟外星新朋友打牌？最基础的物理，永远是第一步。",
+      "accent": "#84C44E",
+      "tint": "#18220F",
+      "cover": "assets/img/covers/bundle-physics-rickmorty.png",
+      "summary": "两本硬的能砸核桃的经典物理书，和一套永不过时风范的扑克牌，帮助你在任何情境下找到乐趣",
+      "askingPrice": 79,
+      "showcase": "portal",
+      "items": [
+        { "name": "《电动力学导论》（Griffiths）", "kind": "book", "originalPrice": 96, "proof": "", "note": "英文原版" },
+        { "name": "《自然哲学之数学原理》（牛顿）", "kind": "book", "originalPrice": 89, "proof": "", "note": "" },
+        { "name": "Rick and Morty 扑克牌", "kind": "item", "originalPrice": 20, "proof": "", "note": "" }
+      ],
+      "gallery": [],
+      "customPage": ""
+    },
+    {
+      "id": "bundle-telescope-optics",
+      "type": "bundle",
+      "title": "光学 · 配观测设备",
+      "theme": "光学 / 观测 / 望远",
+      "tagline": "学光学的原理，用望远镜看结果。",
+      "accent": "#2FA3A8",
+      "tint": "#15201F",
+      "cover": "assets/img/covers/bundle-telescope-optics.png",
+      "summary": "《新概念物理教程·光学》把原理讲明白，双筒望远镜负责让你真的去看一眼。",
+      "askingPrice": 649,
+      "showcase": "telescope",
+      "items": [
+        { "name": "《新概念物理教程 · 光学》", "kind": "book", "originalPrice": 32, "proof": "", "note": "" },
+        { "name": "森林人 8×42 ED 双筒望远镜（第二代，含收纳包）", "kind": "item", "originalPrice": 968, "proof": "assets/img/proofs/forester-8x42.jpg", "note": "ED（Extra-low Dispersion）超低色散镜片版" }
+      ],
+      "gallery": [],
+      "customPage": ""
+    },
+    {
+      "id": "bundle-howto-politics",
+      "type": "bundle",
+      "title": "如何（不切实际地）治理一切",
+      "theme": "政治哲学 / 实用主义 / 椭圆办公室",
+      "tagline": "如何不切实际地解决实际问题——比如，治理一个国家。",
+      "accent": "#46A0B5",
+      "tint": "#15212A",
+      "cover": "assets/img/covers/bundle-howto-politics.png",
+      "summary": "兰道尔·门罗教你用最荒谬的方法解决正经问题，《当代政治哲学》教你正经地讨论荒谬问题。背景是椭圆形办公室，纯属巧合（并不是）。",
+      "askingPrice": 39,
+      "showcase": "politics",
+      "items": [
+        { "name": "《How To：如何不切实际地解决实际问题》（兰道尔·门罗）", "kind": "book", "originalPrice": 30, "proof": "", "note": "xkcd 作者；当时买多了，仅拆封" },
+        { "name": "《当代政治哲学》", "kind": "book", "originalPrice": 42, "proof": "", "note": "" }
+      ],
+      "gallery": [],
+      "customPage": ""
+    },
+    {
+      "id": "bundle-landau-goggles",
+      "type": "bundle",
+      "title": "理论物理的十诫 · 配护目镜",
+      "theme": "理论物理 / 朗道十卷 / 装备",
+      "tagline": "朗道-栗弗席兹十卷，仅拆封；再加一副疯狂科学家的护目镜。",
+      "accent": "#C8773A",
+      "tint": "#2A1C10",
+      "cover": "assets/img/covers/bundle-landau-goggles.png",
+      "summary": "《理论物理学教程》全十卷——朗道学派的传说级难度，物理系的成人礼。仅拆封、近全新。再配一副复古黄铜护目镜，戴上就有种要在黑板前推翻物理学的疯劲。",
+      "askingPrice": 399,
+      "showcase": "landau",
+      "items": [
+        { "name": "朗道《理论物理学教程》全十卷", "kind": "book", "originalPrice": 599, "proof": "assets/img/proofs/landau.jpg", "note": "仅拆封，全新" },
+        { "name": "疯狂科学家护目镜（复古黄铜）", "kind": "item", "originalPrice": 12, "proof": "", "note": "装饰 / cosplay 向" }
+      ],
+      "gallery": [],
+      "customPage": ""
+    },
+
+    {
+      "id": "single-jieti",
+      "type": "single",
+      "title": "新概念物理题解（上下册）",
+      "theme": "单卖 / 物理习题",
+      "tagline": "《新概念物理教程》的官方配套题解，上下两册一起出。",
+      "accent": "#4FA86A",
+      "tint": "#15241A",
+      "cover": "assets/img/covers/single-jieti.png",
+      "summary": "赵凯华、罗蔚茵那套《新概念物理教程》的配套题解，力学、电磁、光学、量子都有详解。上下册两本，一起走。",
+      "askingPrice": 12,
+      "showcase": "",
+      "items": [
+        { "name": "《新概念物理题解》上册 + 下册", "kind": "book", "originalPrice": 30, "proof": "", "note": "两册一套，赵凯华 / 罗蔚茵 等" }
+      ],
+      "gallery": [],
+      "customPage": ""
+    },
+    {
+      "id": "single-chemistry",
+      "type": "single",
+      "title": "普通化学原理（第 4 版）",
+      "theme": "单卖 / 化学",
+      "tagline": "北大版经典，化学入门的硬通货。",
+      "accent": "#5E86C7",
+      "tint": "#16202E",
+      "cover": "assets/img/covers/single-chemistry.png",
+      "summary": "北京大学出版社《普通化学原理》第 4 版。结构清晰、例题扎实，理工科补化学的常备底本。",
+      "askingPrice": 20,
+      "showcase": "",
+      "items": [
+        { "name": "《普通化学原理》（第 4 版）", "kind": "book", "originalPrice": 53, "proof": "", "note": "北京大学出版社" }
+      ],
+      "gallery": [],
+      "customPage": ""
+    },
+    {
+      "id": "single-mach",
+      "type": "single",
+      "title": "力学及其发展的批判历史概论",
+      "theme": "单卖 / 科学史",
+      "tagline": "马赫的批判史——连爱因斯坦都受过它的影响。",
+      "accent": "#C29A5E",
+      "tint": "#241B10",
+      "cover": "assets/img/covers/single-mach.png",
+      "summary": "恩斯特·马赫的名著，从历史与哲学的角度重审力学的每一个概念。商务印书馆「汉译名著」。读完，你会对「惯性」「力」这些词重新陌生一遍。",
+      "askingPrice": 10,
+      "showcase": "",
+      "items": [
+        { "name": "《力学及其发展的批判历史概论》", "kind": "book", "originalPrice": 26, "proof": "", "note": "恩斯特·马赫 著 · 商务印书馆" }
+      ],
+      "gallery": [],
+      "customPage": ""
+    },
+    {
+      "id": "single-evolution",
+      "type": "single",
+      "title": "物理学的进化",
+      "theme": "单卖 / 科普经典",
+      "tagline": "爱因斯坦亲自写的物理学故事，全书没有一个公式。",
+      "accent": "#C0563E",
+      "tint": "#241310",
+      "cover": "assets/img/covers/single-evolution.png",
+      "summary": "爱因斯坦与英费尔德合著，用纯文字讲清从经典力学到相对论与量子的整条线索。物理科普里的天花板。为了表示推荐，价格几近于无",
+      "askingPrice": 4,
+      "showcase": "",
+      "items": [
+        { "name": "《物理学的进化》", "kind": "book", "originalPrice": 21, "proof": "", "note": "爱因斯坦 / 英费尔德 著" }
+      ],
+      "gallery": [],
+      "customPage": ""
+    }
+  ]
+}

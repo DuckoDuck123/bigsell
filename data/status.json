@@ -1,0 +1,18 @@
+{
+  "_comment": "卖出后只改这里。把对应 id 的值改成 sold 即可；还在谈但没付款可用 reserved。可选值：available / reserved / sold",
+  "bundle-drone-calculus": "available",
+  "bundle-evolution-specimens": "available",
+  "bundle-wealth-money": "available",
+  "bundle-sword-forensics": "available",
+  "bundle-wand-calculus": "available",
+  "bundle-magneto-scooter": "available",
+  "bundle-touch-cards": "available",
+  "bundle-physics-rickmorty": "available",
+  "bundle-telescope-optics": "available",
+  "bundle-howto-politics": "available",
+  "bundle-landau-goggles": "available",
+  "single-jieti": "available",
+  "single-chemistry": "available",
+  "single-mach": "available",
+  "single-evolution": "available"
+}

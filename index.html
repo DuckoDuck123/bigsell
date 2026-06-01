@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simba 的仓库 · 2026</title>
+  <meta name="description" content="出国前理性清仓：正经的书 × 不太正经的东西，主题捆绑出售，原价可查，价格私聊。" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/home.css" />
+</head>
+<body>
+  <!-- ===================== top bar ===================== -->
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <a class="topbar__brand" href="index.html">
+        <span class="topbar__logo" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none">
+            <rect class="topbar__logo-bg" x="1.5" y="1.5" width="37" height="37" rx="11"/>
+            <path class="topbar__logo-base" pathLength="100" d="M26.5 13.5 C26.5 8.5 13.5 8.5 13.5 14.5 C13.5 20 26.5 20 26.5 25.5 C26.5 31.5 13.5 31.5 13.5 26.5"/>
+            <path class="topbar__logo-trace" pathLength="100" d="M26.5 13.5 C26.5 8.5 13.5 8.5 13.5 14.5 C13.5 20 26.5 20 26.5 25.5 C26.5 31.5 13.5 31.5 13.5 26.5"/>
+          </svg>
+        </span>
+        <span class="topbar__name" data-site="brand">Simba 的仓库</span>
+      </a>
+      <nav class="topbar__nav">
+        <span class="badge badge--available"><span class="dot"></span><span data-site="year"></span> Moving Sale</span>
+        <a class="btn btn--ghost" href="#collections">开始浏览</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===================== hero ===================== -->
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>Liquidation Sale · <span data-site="location"></span> · <span data-site="year"></span></p>
+      <h1 class="hero__title" data-reveal data-site-html="headline"></h1>
+      <p class="hero__sub lead" data-reveal data-site="subhead"></p>
+      <div class="hero__cta" data-reveal>
+        <a class="btn btn--accent" href="#collections">看看有什么 <span class="arrow">→</span></a>
+        <a class="btn btn--ghost" href="#how">怎么买</a>
+      </div>
+    </div>
+    <div class="hero__marquee" aria-hidden="true">
+      <div class="hero__track"><span data-site="marquee"></span><span data-site="marquee"></span><span data-site="marquee"></span></div>
+    </div>
+  </section>
+
+  <!-- ===================== collections ===================== -->
+  <main id="collections" class="wrap section">
+    <div class="section__head">
+      <h2 data-reveal>主题捆绑 &amp; 单卖</h2>
+      <div class="filters" data-reveal id="filters" role="tablist">
+        <button class="filter is-active" data-filter="all">全部</button>
+        <button class="filter" data-filter="bundle">捆绑包</button>
+        <button class="filter" data-filter="single">单卖</button>
+        <button class="filter" data-filter="available">仅在售</button>
+      </div>
+    </div>
+    <div id="grid" class="grid">
+      <p class="grid__loading mono">正在整理书架…</p>
+    </div>
+  </main>
+
+  <!-- ===================== how it works ===================== -->
+  <section id="how" class="how">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>How it works</p>
+      <h2 class="how__title" data-reveal>四步，干净利落</h2>
+      <ol id="steps" class="steps"></ol>
+    </div>
+  </section>
+
+  <!-- ===================== contact ===================== -->
+  <footer id="contact" class="footer">
+    <div class="wrap footer__inner">
+      <div class="footer__lead">
+        <p class="eyebrow" data-reveal>Get in touch</p>
+        <h2 data-reveal>看到喜欢的，<br />直接找我。</h2>
+        <p class="lead" data-reveal data-site="contactNote"></p>
+      </div>
+      <div class="footer__channels" id="channels" data-reveal></div>
+    </div>
+    <div class="wrap footer__base mono">
+      <span>© <span data-site="year"></span> <span data-site="seller"></span> · <span data-site="brand">理性清仓</span></span>
+      <span>诚信交易 · 先到先得</span>
+    </div>
+  </footer>
+
+  <script type="module" src="assets/js/home.js"></script>
+</body>
+</html>

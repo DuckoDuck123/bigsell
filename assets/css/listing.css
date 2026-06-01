@@ -1,0 +1,107 @@
+/* listing.css — detail page  ·  v2 Sci-Fi/Tech (dark) */
+
+/* topbar (dark) */
+.topbar { position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--bg) 72%, transparent); backdrop-filter: blur(14px) saturate(1.3); border-bottom: 1px solid var(--line); }
+.topbar__inner { display: flex; align-items: center; justify-content: space-between; height: 70px; }
+.topbar__brand { display: inline-flex; align-items: center; gap: 0.7em; }
+.topbar__mark { display: grid; place-items: center; width: 34px; height: 34px; background: var(--fg); color: var(--bg); border-radius: 8px; font-size: 1.05rem; font-weight: 600; line-height: 1; }
+.topbar__name { font-family: var(--display); font-weight: 600; }
+
+.detail__loading, .detail__empty { padding: 6rem 0; color: var(--fg-3); font-family: var(--mono); }
+.detail__empty { text-align: center; display: grid; gap: 1.2rem; place-items: center; }
+.detail__empty h1 { font-size: var(--fs-h2); }
+
+/* ------------------------------- hero ---------------------------------- */
+.detail__hero {
+  position: relative; border-bottom: 1px solid var(--line);
+  padding-block: clamp(2.5rem, 1rem + 6vw, 6rem) clamp(2.5rem, 1rem + 5vw, 5rem);
+}
+.detail__hero::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: radial-gradient(90% 70% at 80% 0%, color-mix(in srgb, var(--accent) 16%, transparent), transparent 65%);
+}
+.detail__hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 1rem + 4vw, 4.5rem); align-items: center; }
+@media (max-width: 860px) { .detail__hero-grid { grid-template-columns: 1fr; } }
+
+.crumbs { display: flex; flex-wrap: wrap; gap: 0.6em; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--fg-3); margin-bottom: 1.8rem; }
+.crumbs a:hover { color: var(--accent); }
+.detail__theme { color: var(--accent); font-size: 0.76rem; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 1.1rem; }
+.detail__title { font-size: var(--fs-h1); font-weight: 600; letter-spacing: -0.035em; max-width: 16ch; margin-bottom: 1.3rem; }
+.detail__tagline { max-width: 42ch; margin-bottom: 1.7rem; }
+.detail__state { font-size: 0.7rem; }
+
+.detail__cover { position: relative; aspect-ratio: 4 / 3; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-lift); border: 1px solid var(--line-2); margin: 0; }
+.detail__cover .cover__img { width: 100%; height: 100%; object-fit: cover; }
+.detail__cover .cover__gen { border-radius: 0; }
+.detail__cover .cover__glyph { font-size: clamp(5rem, 12vw, 9rem); }
+.detail__cover-cap { position: absolute; bottom: 0.9rem; left: 1rem; font-size: 0.62rem; letter-spacing: 0.16em; color: rgba(255,255,255,0.78); text-shadow: 0 1px 8px rgba(0,0,0,0.7); }
+
+/* ----------------------------- overview -------------------------------- */
+.detail__overview {
+  display: grid; grid-template-columns: 1.4fr 1fr; gap: clamp(2rem, 1rem + 4vw, 4.5rem);
+  padding-block: clamp(3rem, 1.5rem + 5vw, 5.5rem); align-items: start;
+}
+@media (max-width: 860px) { .detail__overview { grid-template-columns: 1fr; gap: 2.5rem; } }
+.detail__summary .eyebrow { margin-bottom: 1.3rem; }
+.detail__summary-text { font-family: var(--display); font-size: clamp(1.3rem, 1rem + 1.1vw, 1.85rem); line-height: 1.42; font-weight: 500; letter-spacing: -0.02em; color: var(--fg); }
+
+.loadout { border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg-1); padding: 1.4rem 1.5rem; }
+.loadout__label { font-size: 0.66rem; letter-spacing: 0.16em; color: var(--fg-3); padding-bottom: 0.9rem; border-bottom: 1px solid var(--line); }
+.loadout__list { display: flex; flex-direction: column; }
+.loadout__row { display: grid; grid-template-columns: auto 1fr auto; gap: 0.9rem; align-items: center; padding: 0.85rem 0; border-bottom: 1px solid var(--line); }
+.loadout__row:last-child { border-bottom: 0; padding-bottom: 0; }
+.loadout__idx { font-size: 0.72rem; color: var(--accent); }
+.loadout__name { font-size: 0.96rem; }
+.loadout__kind { font-size: 0.6rem; letter-spacing: 0.12em; color: var(--fg-3); }
+
+/* ----------------------------- price table ----------------------------- */
+.detail__body {
+  display: grid; grid-template-columns: 1fr 360px; gap: clamp(2rem, 1rem + 4vw, 4.5rem);
+  padding-block: clamp(2rem, 1rem + 4vw, 4rem) clamp(3rem, 1.5rem + 6vw, 6rem); align-items: start;
+}
+@media (max-width: 920px) { .detail__body { grid-template-columns: 1fr; } }
+
+.manifest__head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding-bottom: 1.1rem; border-bottom: 1px solid var(--line-2); margin-bottom: 0.3rem; }
+.manifest__head h2 { font-size: var(--fs-h3); font-weight: 600; letter-spacing: -0.02em; }
+.manifest__hint { font-size: 0.7rem; color: var(--fg-3); letter-spacing: 0.04em; }
+
+.manifest__list { display: flex; flex-direction: column; }
+.item { display: grid; grid-template-columns: auto 1fr auto; gap: 1rem; align-items: center; padding: 1.15rem 0; border-bottom: 1px solid var(--line); transition: padding-left 0.4s var(--ease); }
+.item:hover { padding-left: 0.5rem; }
+.item__idx { font-size: 0.76rem; color: var(--accent); align-self: start; padding-top: 0.2rem; }
+.item__top { display: flex; align-items: center; gap: 0.7rem; flex-wrap: wrap; }
+.item__name { font-weight: 500; font-size: 1.04rem; }
+.item__kind { padding: 0.15em 0.55em; font-size: 0.6rem; }
+.item__note { color: var(--fg-2); font-size: 0.86rem; margin-top: 0.25rem; }
+.item__right { display: flex; align-items: center; gap: 0.9rem; }
+.item__price { font-weight: 600; font-size: 1.04rem; font-family: var(--display); }
+.item__proof {
+  display: inline-flex; align-items: center; gap: 0.3em; font-size: 0.7rem; letter-spacing: 0.04em; color: var(--accent);
+  border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent); background: color-mix(in srgb, var(--accent) 12%, transparent);
+  padding: 0.35em 0.7em; border-radius: 100px; transition: background 0.3s var(--ease), transform 0.3s var(--ease);
+}
+.item__proof:hover { transform: translateY(-1px); background: color-mix(in srgb, var(--accent) 22%, transparent); }
+
+.manifest__total { display: flex; align-items: baseline; justify-content: space-between; padding-top: 1.3rem; margin-top: 0.3rem; }
+.manifest__total .mono { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--fg-3); }
+.manifest__total .num { font-family: var(--display); font-size: 1.4rem; font-weight: 600; color: var(--fg-3); text-decoration: line-through; text-decoration-thickness: 1px; }
+
+/* price card */
+.detail__aside { position: sticky; top: 92px; }
+@media (max-width: 920px) { .detail__aside { position: static; } }
+.pricecard { border: 1px solid var(--line-2); border-radius: var(--radius); background: var(--bg-1); padding: 1.8rem; box-shadow: var(--shadow-soft); }
+.pricecard__label { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--fg-3); margin-bottom: 0.6rem; }
+.pricecard__price { font-family: var(--display); font-size: clamp(2.4rem, 2rem + 2vw, 3rem); font-weight: 600; line-height: 1; letter-spacing: -0.03em; }
+.pricecard__compare { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.9rem; }
+.pricecard__compare .was { color: var(--fg-3); text-decoration: line-through; font-size: 0.9rem; }
+.pricecard__save { align-self: flex-start; font-size: 0.7rem; color: var(--accent); background: color-mix(in srgb, var(--accent) 14%, transparent); padding: 0.35em 0.7em; border-radius: 100px; }
+.pricecard__price--tbd { font-size: 2rem; color: var(--accent); }
+.pricecard__tbd-sub { color: var(--fg-2); font-size: 0.9rem; margin-top: 0.6rem; }
+.pricecard__cta { margin-top: 1.6rem; display: flex; flex-direction: column; gap: 0.7rem; }
+.pricecard__cta .btn { width: 100%; justify-content: center; }
+.pricecard__wechat { font-size: 0.74rem; color: var(--fg-3); text-align: center; letter-spacing: 0.04em; }
+.pricecard__note { margin-top: 1.4rem; padding-top: 1.2rem; border-top: 1px solid var(--line); font-size: 0.82rem; color: var(--fg-2); line-height: 1.55; }
+.pricecard__sold { font-size: 2.2rem; color: var(--sold); }
+.pricecard__sold-sub { color: var(--fg-2); margin-top: 0.5rem; font-size: 0.92rem; }
+
+.detail__next { padding-bottom: clamp(4rem, 2rem + 5vw, 7rem); }
