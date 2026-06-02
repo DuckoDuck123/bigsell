@@ -1,6 +1,18 @@
 # 告别书架 · Moving Sale 2026
 
-去美国留学前的二手书 / 物出售站。纯静态，托管在 GitHub Pages。
+去美国留学前的二手书 / 物出售站。纯静态，托管在腾讯 CloudBase 静态网站托管。
+
+## 自动部署
+推送到 GitHub 的 `main` 分支后，GitHub Actions 会自动把网站同步到 CloudBase。
+
+GitHub 仓库需要在 `Settings → Secrets and variables → Actions` 里配置：
+
+- `TENCENTCLOUD_SECRETID`：腾讯云访问密钥 SecretId
+- `TENCENTCLOUD_SECRETKEY`：腾讯云访问密钥 SecretKey
+
+workflow 也兼容 `TCB_SECRET_ID` / `TCB_SECRET_KEY` 这组命名。
+
+CloudBase 环境 ID 已写在 workflow 里：`simba1902-d0g7sxaya83b62541`。
 
 ## 本地预览
 ```bash
