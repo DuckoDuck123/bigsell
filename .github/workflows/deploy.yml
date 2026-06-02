@@ -54,5 +54,5 @@ jobs:
       - name: Login to CloudBase
         run: tcb login --apiKeyId "$TCB_SECRET_ID" --apiKey "$TCB_SECRET_KEY"
 
-      - name: Deploy static files
-        run: tcb hosting deploy ./public / -e "$TCB_ENV_ID" --yes
+      - name: Deploy static site
+        run: tcb app deploy bigsell --framework static --build-command "" --output-dir ./public -e "$TCB_ENV_ID" --yes
