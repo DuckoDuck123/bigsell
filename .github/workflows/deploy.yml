@@ -47,8 +47,5 @@ jobs:
       - name: Login to CloudBase
         run: tcb login --apiKeyId "$TCB_SECRET_ID" --apiKey "$TCB_SECRET_KEY"
 
-      - name: Clear old static files
-        run: tcb hosting delete -e "$TCB_ENV_ID" --force
-
       - name: Deploy static files
         run: tcb hosting deploy ./public -e "$TCB_ENV_ID"
