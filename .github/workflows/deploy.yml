@@ -55,4 +55,4 @@ jobs:
         run: tcb login --apiKeyId "$TCB_SECRET_ID" --apiKey "$TCB_SECRET_KEY"
 
       - name: Deploy static site
-        run: tcb app deploy bigsell --framework static --build-command "" --output-dir ./public -e "$TCB_ENV_ID" --yes
+        run: tcb app deploy bigsell --framework static --install-command "" --build-command "" --output-dir ./public --deploy-path / -e "$TCB_ENV_ID" --force --json
