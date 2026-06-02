@@ -127,3 +127,8 @@ Simba（在开封上学）去美国留学前清仓。纯静态、GitHub Pages：
 ## 📝 待确认
 - 各书目/物品的**确切名称、成色、原价**（现按实拍图猜 + 估价）
 - 还想给哪些捆绑包做 showcase / 玩什么梗
+
+## 🚀 大陆访问优化（部署前）
+- [x] **字体本地化**：Space Grotesk / Inter / JetBrains Mono 的 latin+latin-ext woff2 下载进 `assets/fonts/`，由 `assets/fonts/fonts.css` 本地 @font-face 提供；HTML 删除 Google Fonts CDN 引用（中文仍走系统 PingFang）。
+- [x] **3D 登月舱改点击加载**：默认黑底面板 + ▶ 按钮，点击才注入 Sketchfab iframe（`transparent=1` → 黑色背景）。不再一进页面拉海外资源。
+- 部署：选 **Cloudflare Pages**（今天即可上线、免备案、连现有 GitHub 仓库自动部署）；如需大陆更快，后续可升级到腾讯云 COS 香港地域 / 备案 + 国内 CDN。

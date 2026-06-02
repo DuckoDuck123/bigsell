@@ -94,11 +94,13 @@ export function render() {
       </section>
 
       <section class="scr-3d" data-reveal>
-        <p class="sc__act-no mono">登月舱「鹰号」· 拖动旋转看看</p>
-        <div class="scr-embed">
-          <iframe title="Apollo Lunar Module"
-            src="https://sketchfab.com/models/${LM_UID}/embed?ui_theme=dark&dnt=1&autospin=0.2&ui_infos=0&ui_hint=0&ui_watermark=0"
-            frameborder="0" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen loading="lazy"></iframe>
+        <p class="sc__act-no mono">登月舱「鹰号」· 3D 模型</p>
+        <div class="scr-embed" id="scr-embed" data-uid="${LM_UID}">
+          <button class="scr-embed__load" id="scr-3d-load" type="button">
+            <span class="scr-embed__play">▶</span>
+            <span class="scr-embed__load-t">加载 3D 模型</span>
+            <span class="scr-embed__load-s mono">模型来自 Sketchfab（海外）· 点击后可拖动旋转</span>
+          </button>
         </div>
         <p class="scr-embed__cite mono">3D 模型经 Sketchfab 嵌入 · 公开来源（CC）·
           <a href="https://sketchfab.com/3d-models/apollo-lunar-module-${LM_UID}" target="_blank" rel="noopener">原模型 →</a></p>
@@ -124,5 +126,16 @@ export function init(root) {
     if (img.complete) (img.naturalWidth > 0 ? ok : bad)();
     img.addEventListener("load", ok);
     img.addEventListener("error", bad);
+  });
+
+  // 3D model: load only on click (avoids blocking the page; transparent bg = black)
+  const loadBtn = root.querySelector("#scr-3d-load");
+  loadBtn?.addEventListener("click", () => {
+    const wrap = root.querySelector("#scr-embed");
+    const uid = wrap.dataset.uid;
+    wrap.classList.add("is-loaded");
+    wrap.innerHTML = `<iframe title="Apollo Lunar Module"
+      src="https://sketchfab.com/models/${uid}/embed?ui_theme=dark&dnt=1&autostart=1&transparent=1&ui_infos=0&ui_hint=0&ui_watermark=0&ui_stop=0"
+      frameborder="0" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe>`;
   });
 }
