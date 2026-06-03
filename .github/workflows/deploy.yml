@@ -12,13 +12,22 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      TCB_ENV_ID: simba1902-d0g7sxaya83b62541
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Install CloudBase CLI
+        run: npm install -g @cloudbase/cli --loglevel=error
+
+      - name: Login to CloudBase
+        run: tcb login --apiKeyId "${{ secrets.TENCENTCLOUD_SECRETID }}" --apiKey "${{ secrets.TENCENTCLOUD_SECRETKEY }}"
+
+      - name: Install CloudBase website plugin
+        run: |
+          mkdir -p "$HOME/cloudbase-framework/registry"
+          npm install --prefix "$HOME/cloudbase-framework/registry" @cloudbase/framework-plugin-website@1.9.7 --loglevel=error
+
       - name: Deploy to CloudBase static hosting
-        uses: TencentCloudBase/cloudbase-action@v2
-        with:
-          secretId: ${{ secrets.TENCENTCLOUD_SECRETID }}
-          secretKey: ${{ secrets.TENCENTCLOUD_SECRETKEY }}
-          envId: simba1902-d0g7sxaya83b62541
+        run: tcb framework deploy -e "$TCB_ENV_ID" --verbose
