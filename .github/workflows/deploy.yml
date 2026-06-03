@@ -12,11 +12,30 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     env:
       TCB_ENV_ID: simba1902-d0g7sxaya83b62541
+      CI: true
+      COS_SDK_KEEPALIVE: false
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Prepare static site
+        run: |
+          rm -rf public
+          mkdir -p public
+          rsync -av \
+            --exclude '.git' \
+            --exclude '.github' \
+            --exclude '.DS_Store' \
+            --exclude 'Agent.md' \
+            --exclude 'README.md' \
+            --exclude 'cloudbaserc.json' \
+            --exclude 'node_modules' \
+            --exclude 'public' \
+            ./ public/
+          grep -n '"askingPrice": 1799' public/data/inventory.json
 
       - name: Install CloudBase CLI
         run: npm install -g @cloudbase/cli --loglevel=error
@@ -24,10 +43,5 @@ jobs:
       - name: Login to CloudBase
         run: tcb login --apiKeyId "${{ secrets.TENCENTCLOUD_SECRETID }}" --apiKey "${{ secrets.TENCENTCLOUD_SECRETKEY }}"
 
-      - name: Install CloudBase website plugin
-        run: |
-          mkdir -p "$HOME/cloudbase-framework/registry"
-          npm install --prefix "$HOME/cloudbase-framework/registry" @cloudbase/framework-plugin-website@1.9.7 --loglevel=error
-
       - name: Deploy to CloudBase static hosting
-        run: tcb framework deploy -e "$TCB_ENV_ID" --verbose
+        run: tcb hosting deploy ./public / -e "$TCB_ENV_ID" --json
