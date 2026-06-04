@@ -4,3 +4,10 @@
 !.github/
 !.github/workflows/
 !.github/workflows/*.yml
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
